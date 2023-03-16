@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Supermercado Davids</title>
+<link rel="stylesheet" href="/css/css.css">
+<style>
+  .img {
+    width: 100px;
+    height: 100px;
+    vertical-align: top;
+  }
+  .img2 {
+    width: 100px;
+      height: 100px;
+      vertical-align: top;
+      float: right;
+  }
+  /* Estilos generales */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: lightblue;
+    padding: 20px;
+  }
+
+  h1 {
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Estilos para el menú */
+  nav {
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  /* Estilos para el contenido principal */
+  main {
+    padding: 20px;
+  }
+
+  /* Estilos para el pie de página */
+  footer {
+    background-color: lightblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .products-section {
+text-align: center;
+}
+
+.section-title {
+font-size: 32px;
+margin-bottom: 40px;
+}
+
+.product-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.product {
+width: 300px;
+margin: 40px;
+text-align: center;
+}
+
+.product img {
+width: 100%;
+height: auto;
+border-radius: 10px;
+margin-bottom: 20px;
+}
+
+.product-name {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.product-price {
+font-size: 20px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.product-button {
+padding: 10px 20px;
+background-color: #333;
+color: #fff;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.product-button:hover {
+background-color: #fff;
+color: #333;
+}
+table {
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+.inframe{
+width: 100%;
+}
+.footer-center {
+text-align: center;
+}
+.footer-right {
+text-align: right;
+}
+.footer-left {
+display: flex;
+align-items: center;
+}
+.nav{
+  position: absolute;
+top: 15px;
+left: 15px;
+background-color: blue;
+color: white;
+padding: 20px;
+}
+</style>
+</head>
+<body>
+  <header>
+    
+    <a href="./src/pago.html"><img class="img" src="./img/logo.svg" id="logo1"></a>
+    <a href="./src/pago.html"><img class="img2" src="./img/logo.svg" id="logo2"></a>
+    <h1>Mi Supermercado David's</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="src/Productos.html">Bebidas energeticas</a>
+    <a href="index.html">Ubicación</a>
+    <a href="src/ofertas.html">Snacks</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenidos a Mi Supermercado</h2>
+      <p>Ofrecemos una amplia selección de productos frescos y de calidad a precios competitivos.</p>
+    </section>
+    <section id="productos">
+      <h2>Nuestros productos</h2>
+      <p>Contamos con una amplia selección productos como bebidas energeticas o snacks.</p>
+      <div class="products-section">
+        <p> ¡Ahora tambien incluimos suplementos en nuestra gama de productos!</p>
+        <h2 class="section-title">Novedades</h2>
+        <div class="product-container">
+          <div class="product">
+            <img src="./img/bebida6.jpg" alt="Product 1">
+            <h3 class="product-name">Monster Mango</h3>
+            <p class="product-price">1.50€</p>
+            <button class="product-button">Añadir al carrito</button>
+          </div>
+          <div class="product">
+            <img src="./img/bebida1.jpg" alt="Product 2">
+            <h3 class="product-name">Red Bull</h3>
+            <p class="product-price">2.00€</p>
+            <button class="product-button">Añadir al carrito</button>
+          </div>
+          <div class="product">
+            <img src="./img/bebida10.jpg" alt="Product 3">
+            <h3 class="product-name">Jagger</h3>
+            <p class="product-price">8.00€</p>
+            <button class="product-button">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <section id="ubicacion">
+      <h2>Ubicación</h2>
+      <p>Nos encontramos en la calle [dirección del supermercado]. ¡Ven y visitanos!</p>
+      <iframe src="https://maps.google.com/maps?q=Calle+San+Juan+Don+Benito&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+  </main>
+
+  <footer>
+    <div class="footer-right">
+      <p>Copyright (c) 2003 Company Name All Rights Reserved This product is protected by copyright and distributed under licenses restricting copying, distribution, and decompilation.</p>
+    </div>
+  </footer>
+  <script>
+    const buttons = document.querySelectorAll('.product-button');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            alert('Su producto se ha añadido correctamente');
+        });
+    });
+</script>
+</body>
+</html>
+
